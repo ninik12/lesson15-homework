@@ -18,7 +18,8 @@ let user = {
 }
 
 function fullName(obj){
-    let info = obj.firstname + ' ' + obj.lastname
+    // let info = obj.firstname + ' ' + obj.lastname
+    let info = `${obj.firstname} ${obj.lastname}`
     if (obj.isloggedin){
         return info
     } return false
@@ -26,6 +27,20 @@ function fullName(obj){
 let resultFullName = fullName(user);
 console.log(resultFullName);
 
+
+
+//
+function findMaxNumber(...numberArrays){
+   let maxValue = 0;
+   for(let item of numberArrays){
+    if(item > maxValue){
+        maxValue = item
+    }
+   }
+   return maxValue
+}
+let result2 = findMaxNumber(6, 89, 35, 26, 5, 106, 44)
+console.log(result2);
 
 
 //
